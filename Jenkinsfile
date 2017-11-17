@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-     //   app = docker.build("shailendrapatil-fujitsu/docker-image")
+        app = docker.build("docker-image")
     }
 
   /*  stage('Test image') {
