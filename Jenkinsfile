@@ -32,7 +32,7 @@ node {
         //withDockerRegistry([url: 'http://127.0.0.1:5000']) {
         
         docker.withRegistry('http://127.0.0.1:5000') {
-            
+           
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
