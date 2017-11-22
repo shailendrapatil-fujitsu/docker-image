@@ -3,7 +3,7 @@ node {
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
-
+       
         checkout scm
     }
 
@@ -33,6 +33,7 @@ node {
         //withDockerRegistry([url: 'http://127.0.0.1:5000']) {
         
         docker.withRegistry('http://127.0.0.1:5000') {
+            
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
